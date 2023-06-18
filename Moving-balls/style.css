@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(22, 22, 22);
+}
+
+.base-line {
+  width: 800px;
+  height: 20px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 600px;
+  display: flex;
+  padding-left: 40px;
+}
+
+.base-line li {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 40px;
+  list-style: none;
+  margin-right: 40px;
+  margin-top: -61px;
+  animation-name: moving-balls;
+  animation-delay: 1s;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moving-balls {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-110px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.base-line li:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+li:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+li:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+li:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+li:nth-child(5) {
+  animation-delay: 1.5s;
+}
+
+li:nth-child(6) {
+  animation-delay: 1.8s;
+}
+
+li:nth-child(7) {
+  animation-delay: 2.1s;
+}
+
+li:nth-child(8) {
+  animation-delay: 2.4s;
+}

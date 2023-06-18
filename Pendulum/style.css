@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.pendulum-base {
+  width: 560px;
+  height: 20px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 160px;
+  display: flex;
+}
+
+.pendulum-base .bar {
+  width: 6px;
+  height: 400px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  margin-left: 90px;
+  transform-origin: top;
+  animation-iteration-count: infinite;
+}
+
+.bar::before {
+  width: 100px;
+  height: 100px;
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  bottom: -5px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.pendulum-base > div:first-child {
+  animation-name: left;
+  animation-duration: 1.5s;
+}
+
+.pendulum-base > div:last-child {
+  animation-name: right;
+  animation-duration: 1.9s;
+}
+
+@keyframes left {
+  0% {
+    transform: rotate(0deg);
+  }
+  55% {
+    transform: rotate(30deg);
+  }
+  100% {
+    animation-delay: 7s;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes right {
+  0% {
+    transform: rotate(0deg);
+  }
+  55% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    animation-delay: 7s;
+    transform: rotate(0deg);
+  }
+}
